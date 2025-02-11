@@ -1,0 +1,330 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.animations {
+  display: flex;
+  gap: 40px;
+}
+
+header {
+  background: rgb(52, 206, 142);
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  margin: 0;
+}
+
+button {
+  margin: 50px;
+  font-size: 20px;
+  background-color: red;
+  cursor: pointer;
+  animation: buttonVibro 0.1s infinite;
+  transition: 0.1s;
+}
+
+button:hover {
+  animation: none;
+  background-color: #00ff62;
+}
+
+a {
+  position: relative;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  height: 2px;
+  width: 0;
+}
+
+a:hover::after {
+  background-color: #00ff62;
+  animation: linkLine 1s forwards;
+}
+
+a:hover {
+  color: #00ff62;
+}
+
+@keyframes buttonVibro {
+  0% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes linkLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.test {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin-top: 50px;
+}
+
+.test::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #000;
+  left: 0;
+  right: 0;
+}
+
+.test__ball {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #2f25b8;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  /* animation:  5s ease-in-out infinite; */
+  animation: dropBall 7s linear infinite;
+}
+
+@keyframes dropBall {
+  0% {
+    bottom: 100%;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background: #cc3f85;
+  }
+  15% {
+    height: 25px;
+    width: 75px;
+    background: red;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  30% {
+    bottom: 50%;
+    background: #cc3f85;
+    animation-timing-function: ease-out;
+  }
+  32% {
+    bottom: 50%;
+    background: #cc3f85;
+    animation-timing-function: ease-in;
+  }
+  37% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  40% {
+    height: 25px;
+    width: 75px;
+    background: red;
+  }
+  42% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  50% {
+    bottom: 25%;
+    background: #cc3f85;
+    animation-timing-function: ease-out;
+  }
+  52% {
+    bottom: 25%;
+    background: #cc3f85;
+    animation-timing-function: ease-in;
+  }
+  56% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  58% {
+    height: 25px;
+    width: 75px;
+    background: red;
+  }
+  60% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  65% {
+    bottom: 13%;
+    background: #cc3f85;
+    animation-timing-function: ease-out;
+  }
+  67% {
+    bottom: 13%;
+    background: #cc3f85;
+    animation-timing-function: ease-in;
+  }
+  70% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  72% {
+    height: 25px;
+    width: 75px;
+    background: red;
+  }
+  74% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  78% {
+    bottom: 7%;
+    background: #cc3f85;
+    animation-timing-function: ease-out;
+  }
+  80% {
+    bottom: 7%;
+    background: #cc3f85;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  84% {
+    height: 25px;
+    width: 75px;
+    background: red;
+  }
+  86% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  90% {
+    bottom: 3%;
+    background: #cc3f85;
+    animation-timing-function: ease-out;
+  }
+  92% {
+    bottom: 3%;
+    background: #cc3f85;
+    animation-timing-function: ease-in;
+  }
+  94% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  96% {
+    height: 25px;
+    width: 75px;
+    background: red;
+  }
+  98% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.cradle {
+  display: flex;
+  position: relative;
+}
+
+.cradle .string {
+  width: 2px;
+  height: 200px;
+  background-color: #000;
+  position: relative;
+  margin: 0 20px;
+  transform-origin: left top;
+}
+
+.cradle .ball {
+  width: 50px;
+  height: 50px;
+  background-color: #2f25b8;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cradle .string:nth-child(1) {
+  animation: ballRight 2s infinite ease-in-out;
+}
+
+.cradle .string:nth-child(5) {
+  animation: ballLeft 2s infinite ease-in-out 1s;
+}
+
+@keyframes ballRight {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@keyframes ballLeft {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
