@@ -1,0 +1,40 @@
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  margin-bottom: 40px;
+}
+
+.buttons__item {
+  padding: 13px 20px;
+  background-color: inherit;
+  border: 2px solid #4fc3f7;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons__item:hover {
+  background-color: #f0faff;
+}
+
+.buttons__item.button-active {
+  background-color: #4fc3f7;
+  color: #fff;
+}
+
+.flex-section__content {
+  padding: 40px;
+}
