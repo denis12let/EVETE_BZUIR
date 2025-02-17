@@ -1,6 +1,6 @@
-const justifyContentButtons = document.querySelector('.flex__justifyContent');
-const flexDirectionButtons = document.querySelector('.flex__flexDirection');
-const alignItemsButtons = document.querySelector('.flex__alignItems');
+const justifyContent = document.querySelector('.flex__justifyContent');
+const flexDirection = document.querySelector('.flex__flexDirection');
+const alignItems = document.querySelector('.flex__alignItems');
 
 const flexHandler = (flexSection, flexProperty) => {
   const buttonsList = flexSection.querySelectorAll('.buttons__item');
@@ -17,6 +17,6 @@ const flexHandler = (flexSection, flexProperty) => {
   });
 };
 
-flexHandler(justifyContentButtons, 'justifyContent');
-flexHandler(flexDirectionButtons, 'flexDirection');
-flexHandler(alignItemsButtons, 'alignItems');
+flexHandler(justifyContent, 'justifyContent');
+flexHandler(flexDirection, 'flexDirection');
+flexHandler(alignItems, 'alignItems');
