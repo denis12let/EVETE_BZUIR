@@ -61,5 +61,5 @@ article {
   grid-area: e9;
 }
 .grid article:nth-child(10) {
-  grid-area: e1';
+  grid-area: e1;
 }
