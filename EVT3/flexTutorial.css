@@ -37,4 +37,35 @@ h1 {
 
 .flex-section__content {
   padding: 40px;
+  border: 2px solid #4fc3f7;
+}
+
+.flex__box {
+  display: flex;
+  border: 1px dotted #808080;
+  padding: 2px;
+  gap: 2px;
+}
+
+.flex__item {
+  color: #fff;
+  background-color: #4fc3f7;
+  font-weight: 600;
+  padding: 12px 20px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.justifyContent__box {
+  justify-content: flex-start;
+}
+
+.flexDirection__box {
+  flex-direction: row;
+}
+
+.alignItems__box {
+  align-items: stretch;
+  height: 100px;
 }
