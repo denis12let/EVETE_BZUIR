@@ -108,4 +108,4 @@ var simka = 'nolik';
 
 ## Картинка
 
-## ![img](![alt text](image.png))
+## ![alt text](image.png)
