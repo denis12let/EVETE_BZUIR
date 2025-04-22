@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Тренды во фронтенде 2020</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-transition="fade">
+        <h1>Тренды во фронтенде</h1>
+        <h3>2020 год</h3>
+        <aside class="notes">
+          Приветствие. Сегодня поговорим о ключевых трендах фронтенда в 2020 году.
+        </aside>
+      </section>
+
+      <section data-transition="slide">
+        <h2>3D на веб-страницах</h2>
+        <p>Three.js, WebGL, Spline</p>
+        <pre>
+          <code class="hljs javascript" data-trim>
+            import * as THREE from 'three';
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer();
+          </code>
+        </pre>
+        <aside class="notes">
+          Three.js — популярная библиотека для 3D-графики. Пример кода инициализации сцены.
+        </aside>
+      </section>
+
+      <section data-transition="convex">
+        <h2>Микроанимации</h2>
+        <div class="fragment fade-up">
+          <p>GSAP, Framer Motion, CSS View Transitions</p>
+        </div>
+        <div class="fragment fade-in">
+          <pre>
+            <code class="hljs css" data-trim>
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+            </code>
+          </pre>
+        </div>
+        <aside class="notes">
+          Микроанимации улучшают UX. Пример простой CSS-анимации.
+        </aside>
+      </section>
+
+      <section data-transition="zoom">
+        <h2>AI во фронтенде</h2>
+        <ul>
+          <li class="fragment">Генерация кода (GitHub Copilot)</li>
+          <li class="fragment">Оптимизация изображений (Squoosh)</li>
+        </ul>
+        <aside class="notes">
+          ИИ помогает в разработке: от автодополнения кода до оптимизации контента.
+        </aside>
+      </section>
+
+      <section data-transition="fade-in slide-out">
+        <h2>Адаптивный дизайн</h2>
+        <img src="https://png.pngtree.com/png-clipart/20200225/original/pngtree-grey-mobile-phone-illustration-vector-on-white-background-png-image_5288389.jpg" width="500" alt="Mobile First">
+        <aside class="notes">
+          Mobile First и адаптивная вёрстка остаются ключевыми трендами.
+        </aside>
+      </section>
+
+      <section data-transition="none">
+        <h2>Веб-компоненты</h2>
+        <pre>
+          <code class="hljs html" data-trim>
+            <custom-button>Кнопка</custom-button>
+            <script>
+              class CustomButton extends HTMLElement {
+                constructor() {
+                  super();
+                  this.attachShadow({ mode: 'open' });
+                }
+              }
+              customElements.define('custom-button', CustomButton);
+            </script>
+          </code>
+        </pre>
+        <aside class="notes">
+          Веб-компоненты позволяют создавать переиспользуемые UI-элементы.
+        </aside>
+      </section>
+
+      <section data-transition="fade">
+        <h2>Итоги</h2>
+        <ul>
+          <li>3D и анимации</li>
+          <li>AI-инструменты</li>
+          <li>Веб-компоненты</li>
+        </ul>
+        <aside class="notes">
+          Подведение итогов. Вопросы?
+        </aside>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
